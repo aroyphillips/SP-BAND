@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "SPBAND"
+version = "0.0.1"
+description = "Implementation of Spectral Parameterization for the Broadband Analysis of Neural Data (SP-BAND) a work presented at the Asilomar Conference on Signals, Systems, and Computers on October 28, 2024."
+authors = [
+  { name = "Anderson Roy Phillips \u0026 Aila Teimouri" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.10"
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.ruff.lint.isort]
+known_first_party = ["CanonParam"]
+force_sort_within_sections = true
