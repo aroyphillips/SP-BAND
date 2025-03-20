@@ -1,5 +1,5 @@
 # SP-BAND
-Implementation of Spectral Parameterization for the Broadband Analysis of Neural Data (SP-BAND), a work presented at the Asilomar Conference on Signals, Systems, and Computers on October 28, 2024.
+Implementation of Spectral Parameterization for the Broadband Analysis of Neural Data (SP-BAND), a work presented at the Asilomar Conference on Signals, Systems, and Computers on October 28, 2024. With the paper still in press, it is viewable [here](https://drive.google.com/file/d/1MtZzlwuMumeVnvTDh_DOCPfa-Fk1jnee/view?usp=sharing)
 
 This work is an extension of the spectral parameterization algorithm proposed by Donoghue _et al._ (2020) "Parameterizing neural power spectra into periodic and aperiodic components``. _Nature Neuroscience_, 23, 1655-1665. DOI: [10.1038/s41593-020-00744-x](https://doi.org/10.1038/s41593-020-00744-x).
 
