@@ -37,6 +37,7 @@ To use the SP-BAND, visit the [notebooks](notebooks) directory for a demonstrati
 ## Citation
 
 If you use this methodology, please cite the conference manuscript as:
+```
 @inproceedings{phillips_canonical_2024,
 	title = {Canonical Parameterization of Neural Power Spectra for the Detection of Mild Traumatic Brain Injury},
 	booktitle = {2024 58th Asilomar Conference on Signals, Systems, and Computers},
@@ -44,7 +45,7 @@ If you use this methodology, please cite the conference manuscript as:
 	month = nov,
 	year = {2024},
 }
-
+```
 ## Repository Structure
 The repository is structured as follows:
 ```
