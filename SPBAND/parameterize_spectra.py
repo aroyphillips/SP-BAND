@@ -783,7 +783,6 @@ class ParamSpectra():
                         'error': self.error_}
         return params_out
 
-
 def str2band(bands, max_n_peaks=50, l_freq=0.3, h_freq=250, n_division=1):
     # https://www.science.org/doi/full/10.1126/science.1099745 for canonical bands and buzsaki bands
     if type(bands) == list:

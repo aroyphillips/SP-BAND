@@ -1,0 +1,17 @@
+name: spband
+channels:
+  - defaults
+  - conda-forge
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - fooof
+  - joblib
+  - matplotlib
+  - numpy
+  - pandas
+  - python=3.11.9
+  - scipy
+  - ipykernel
+  - jupyter
+prefix: /home/ap60/miniconda3/envs/spband
