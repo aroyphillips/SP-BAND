@@ -766,12 +766,13 @@ class ParamSpectra():
         out_noise_pks = [None]* self._max_harmonic
         out_noise_wids = [None] * self._max_harmonic # half width of the noise peak
 
-        if len(self._noise_pks) > 0:
-            for ii, noise_pk in enumerate(self._noise_pks):
-                # find the closest noise peak in the noise_pks
-                ndx = np.argmin(np.array([np.abs(noise_pk - guess_noise_pk) for guess_noise_pk in guess_noise_pks]))
-                out_noise_pks[ndx] = noise_pk
-                out_noise_wids[ndx] = (self._noise_ranges[ii][1] - self._noise_ranges[ii][0])/2
+        if self._noise_pks:
+            if len(self._noise_pks) > 0:
+                for ii, noise_pk in enumerate(self._noise_pks):
+                    # find the closest noise peak in the noise_pks
+                    ndx = np.argmin(np.array([np.abs(noise_pk - guess_noise_pk) for guess_noise_pk in guess_noise_pks]))
+                    out_noise_pks[ndx] = noise_pk
+                    out_noise_wids[ndx] = (self._noise_ranges[ii][1] - self._noise_ranges[ii][0])/2
 
         # get the parameters
         params_out = {'aperiodic_params': self.aperiodic_params_,
