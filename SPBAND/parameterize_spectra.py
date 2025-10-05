@@ -84,7 +84,7 @@ class ParamSpectra():
         max_n_peaks : int, optional, default: 6, only used if bands is a specified as "log" or "linear"
             Maximum number of peaks to fit.
         log_freqs : bool, optional, default: True
-            Whether or not the input frequencies are in natural log space.
+            Whether or not the periodic components are fit in natural log space. Input frequency should be in linear space.
         n_division : int, optional, default: 1
             Number of divisions to split each frequency band into.
         aperiodic_mode : {'fixed', 'knee'}
@@ -395,7 +395,7 @@ class ParamSpectra():
         # remove powerline harmonics if linenoise is not None
         self._max_harmonic = int(freqs.max()//self.linenoise) if self.linenoise is not None else 0
         if self._max_harmonic > 0:
-            harmonics = [60*int(ii) for ii in range(1, self._max_harmonic+1)]
+            harmonics = [self.linenoise*int(ii) for ii in range(1, self._max_harmonic+1)]
             noise_pks, noise_ranges = detect_powerline_harmonics_peak_widths(freqs, power_spectrum, harmonics=harmonics, prominence=self.prominence, verbose=self.verbose-1)
             if self.verbose>4:
                 print(f"Nans before interpolated power_spectrum: {np.sum(np.isnan(power_spectrum))}, Infs before interpolated power_spectrum: {np.sum(np.isinf(power_spectrum))}")
